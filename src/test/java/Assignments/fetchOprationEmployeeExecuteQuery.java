@@ -1,11 +1,14 @@
-package Simple_Programs;
+package Assignments;
+
+
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class FetchOprationExecute {
+public class fetchOprationEmployeeExecuteQuery  {
 
 	public static void main(String[] args) {
 		
@@ -22,23 +25,17 @@ public class FetchOprationExecute {
 			
 		    //third step
 			Statement statement = connection.createStatement();
-			System.out.println("Statement printed");
-			System.out.println("");
+			System.out.print("Statement printed");
 			
-			String fetch = "SELECT * FROM student";
+			String fetch = "SELECT * FROM employee";
 			
 			//forth step
-			boolean execute = statement.execute(fetch);
-			ResultSet rs = statement.getResultSet();
-			
-
+			ResultSet rs = statement.executeQuery(fetch);
 			while(rs.next()) {
 			
 			System.out.println(rs.getInt(1));
 			System.out.println(rs.getString("name"));
 			System.out.println(rs.getInt("age"));
-			System.out.println("");
-			
 			}
 			
 			//fifth step
