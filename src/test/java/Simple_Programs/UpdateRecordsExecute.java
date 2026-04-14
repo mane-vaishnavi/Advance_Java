@@ -8,6 +8,7 @@ import java.sql.Statement;
 public class UpdateRecordsExecute {
 
 	public static void main(String[] args) {
+		
 		String url = "jdbc:postgresql://localhost:5432/school?user=postgres&password=root";
 
 		    //first step

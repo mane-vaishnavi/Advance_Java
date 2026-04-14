@@ -8,9 +8,7 @@ import java.sql.Statement;
 public class FetchOprationExecute {
 
 	public static void main(String[] args) {
-		
-		
-		
+
 		try {
 			Class.forName("org.postgresql.Driver");
 			

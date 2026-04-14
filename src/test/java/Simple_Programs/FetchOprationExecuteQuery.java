@@ -11,8 +11,6 @@ public class FetchOprationExecuteQuery {
 
 	public static void main(String[] args) {
 		
-		String url = "jdbc:postgresql://localhost:5432/school?user=postgres&password=root";
-		
 		try {
 			Class.forName("org.postgresql.Driver");
 			
