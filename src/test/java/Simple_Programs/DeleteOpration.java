@@ -10,30 +10,30 @@ public class DeleteOpration {
 	public static void main(String[] args) {
 		String url = "jdbc:postgresql://localhost:5432/school?user=postgres&password=root";
 
-		    //first step
+		    //1st step
 		try {
 		  	Class.forName("org.postgresql.Driver");
 			
 		  	System.out.println("DriverLoaded");
 			
-			//second step
+			//2nd step
 		 	Connection connection = DriverManager.getConnection(url);
 			System.out.println("Connection Establishd");
 			
-		    //third step
+		    //3rd step
 			Statement statement = connection.createStatement();
 			System.out.print("Statement printed  ");
 			
-			//forth step
+			//4th step
 			String delete = "DELETE from student where id=101";
 			boolean b = statement.execute(delete);
 			System.out.println(b);
 			System.out.println("record delete");
 			
-			//fifth step
+			//5th step
 			connection.close();
 			
-			m
+			
 		}catch (ClassNotFoundException | SQLException e) {
 			
 			e.printStackTrace();
