@@ -22,7 +22,7 @@ public class FetchOprationExecuteQuery {
 			
 		    //third step
 			Statement statement = connection.createStatement();
-			System.out.print("Statement printed");
+			System.out.println("Statement printed");
 			
 			String fetch = "SELECT * FROM student";
 			
