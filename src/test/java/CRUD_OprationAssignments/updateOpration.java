@@ -1,4 +1,4 @@
-package Assignments;
+package CRUD_OprationAssignments;
 
 
 import java.sql.Connection;
@@ -6,7 +6,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UpdateRecordsEmployeeExecuteUpdate {
+public class updateOpration { 
+
 	public static void main(String[] args) {
 		String url = "jdbc:postgresql://localhost:5432/school?user=postgres&password=root";
 
@@ -22,16 +23,13 @@ public class UpdateRecordsEmployeeExecuteUpdate {
 			
 		    //third step
 			Statement statement = connection.createStatement();
-			System.out.println("Statement printed");
+			System.out.print("Statement printed");
 			
 			//forth step
-		    String update = "UPDATE employee SET name ='pallavi' where id=102";
-			int b = statement.executeUpdate(update);
-			if(b>0) {
-				System.out.println(b + "rows affected.");	
-				System.out.println("record updated");
-			}else
-				System.out.println("record not updated.");
+		    String update = "UPDATE employee SET name ='pallavi' where id=101";
+			boolean b = statement.execute(update);
+			System.out.println(b);
+			System.out.println("record updated");
 			
 			//fifth step
 			connection.close();
@@ -41,5 +39,4 @@ public class UpdateRecordsEmployeeExecuteUpdate {
 			e.printStackTrace();
 		}
 	}
-
 }

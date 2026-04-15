@@ -1,4 +1,4 @@
-package Assignments;
+package CRUD_OprationAssignments;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

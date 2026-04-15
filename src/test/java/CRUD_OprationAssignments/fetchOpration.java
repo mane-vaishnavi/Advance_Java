@@ -1,5 +1,4 @@
-package Assignments;
-
+package CRUD_OprationAssignments;
 
 
 import java.sql.Connection;
@@ -8,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class fetchOprationEmployeeExecuteQuery  {
+public class fetchOpration {
 
 	public static void main(String[] args) {
 		
@@ -27,10 +26,15 @@ public class fetchOprationEmployeeExecuteQuery  {
 			Statement statement = connection.createStatement();
 			System.out.print("Statement printed");
 			
-			String fetch = "SELECT * FROM employee";
+			String fetch = "SELECT * FROM student";
+			
+			
 			
 			//forth step
-			ResultSet rs = statement.executeQuery(fetch);
+			boolean execute = statement.execute(fetch);
+			ResultSet rs = statement.getResultSet();
+			
+
 			while(rs.next()) {
 			
 			System.out.println(rs.getInt(1));
@@ -48,3 +52,4 @@ public class fetchOprationEmployeeExecuteQuery  {
 	}
 
 }
+
