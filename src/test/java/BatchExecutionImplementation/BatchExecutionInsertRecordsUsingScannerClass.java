@@ -5,8 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
 
-public class BatchExecutionInsertRecords {
+public class BatchExecutionInsertRecordsUsingScannerClass {
 
 	public static void main(String[] args) {
 
@@ -21,29 +22,29 @@ public class BatchExecutionInsertRecords {
 			System.out.println("Connection Establishd");
 			
 		   PreparedStatement statement = connection.prepareStatement("INSERT INTO department VALUES(?,?)");
-			statement.setInt(1,202);
-			statement.setString(2,"Manager");
-			statement.addBatch();//--------void
+		   
+		   Scanner scanner = new Scanner(System.in);
+           System.out.println("enter how many records you want to add");
+		   int count = scanner.nextInt();
+		   for(int i=1;i<=count;i++) {
+			   
+			   
+           System.out.println("ENTER ID:");
+           int id = scanner.nextInt();
+
+           System.out.println("ENTER DEPARTMENT NAME:");
+           String name = scanner.next();
+           
+           statement.setInt(1, id);
+           statement.setString(2, name);
+           statement.addBatch();//--------void
+		   }
 			
-			statement.setInt(1,107);
-			statement.setString(2,"SAP");
-			statement.addBatch();//--------void
-			
-			statement.setInt(1,108);
-			statement.setString(2,"CustomerSupport");
-			statement.addBatch();//--------void
-			
-			statement.setInt(1,109);
-			statement.setString(2,"ProjectManagers");
-			statement.addBatch();//--------void
-			
-			statement.setInt(1,110);
-			statement.setString(2,"Trainers");
-			statement.addBatch();//--------void
-			
-			statement.executeBatch();
+		    statement.executeBatch();
 			
 			System.out.println("insert records");
+			
+			
 			//fifth step
 			connection.close();
 			
