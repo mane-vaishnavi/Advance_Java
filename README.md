@@ -43,6 +43,6 @@ To understand Advanced Java (JDBC) concepts
 To perform database operations practically
 To prepare for technical interviews
 To gain knowledge of real-world backend development
-👩‍💻 Author :
 
+👩‍💻 Author :
 Vaishnavi Mane
