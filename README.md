@@ -8,11 +8,12 @@ The main objective of this project is to perform real-world database operations 
 The project also includes examples of transaction management, ensuring data consistency and reliability during database operations.
 
 🔹 Each module connects to a database schema with corresponding tables.
-Language Used – Core Java
-Concept Used – JDBC
-IDE Used – Eclipse
-Database Used – PostgreSQL
-Build Tool – Maven
+#Language Used – Core Java
+#Concept Used – JDBC
+#IDE Used – Eclipse
+#Database Used – PostgreSQL
+#Build Tool – Maven
+
 🔹 Frontend Implementation :
 Core Java
 Core Java is used to build the application logic and handle database operations. It includes concepts like classes, objects, exception handling, and collections.
